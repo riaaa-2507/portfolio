@@ -96,7 +96,7 @@ export const PROJECTS = [
     image:
       "webproject.png",
     tech: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-    github: "#",
+    github: "https://github.com/riaaa-2507/portfolio",
     demo: "#",
     learnings:
       "Learning web development by building a real product from scratch — understanding every design and technical decision.",
