@@ -12,7 +12,7 @@ export const SITE = {
   email: "riyas25707@gmail.com",
   github: "https://github.com/riaaa-2507",
   linkedin: "https://www.linkedin.com/in/riya-s-751998330",
-  resumeUrl: "/resume-placeholder.pdf",
+  resumeUrl: "/resume.pdf",
   // Featured identity image (campus photograph). The previous close-up portrait was removed per request.
   heroPhoto: "/campus.jpg",
   campusPhoto: "/campus.jpg",
@@ -161,7 +161,7 @@ export const COMMUNITY = {
   description:
     "Participated in a menstrual hygiene awareness and sanitary pad distribution initiative organized through the Women's Development Cell (WDC). The experience involved community outreach, teamwork, and promoting awareness about women's health and dignity, reinforcing the importance of social responsibility alongside academic and technical growth.",
   // Replace with the official Instagram post URL when available
-  instagramUrl: "#",
+  instagramUrl: "https://www.instagram.com/p/DUkw0lcEhCQ/?igsh=YWRrdG1qbnJpajJ5",
   // Short context tag shown next to the CTA
   contextTag: "Women's Development Cell · Motilal Nehru College",
 };
