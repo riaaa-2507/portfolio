@@ -1,0 +1,87 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Mail, Github, Linkedin, Download, ArrowUpRight } from "lucide-react";
+import { SITE } from "@/content";
+
+export default function Connect() {
+  const links = [
+    { icon: Mail, label: "Email", value: SITE.email, href: `mailto:${SITE.email}`, testId: "connect-email" },
+    { icon: Linkedin, label: "LinkedIn", value: "Connect with me", href: SITE.linkedin, testId: "connect-linkedin" },
+    { icon: Github, label: "GitHub", value: "Explore my code", href: SITE.github, testId: "connect-github" },
+  ];
+
+  return (
+    <section id="connect" className="relative py-28 md:py-40 overflow-hidden" data-testid="connect-section">
+      <div className="blob w-[600px] h-[600px] bg-[#FF6B6B]/20 -top-20 -right-32 animate-float-slow" />
+      <div className="blob w-[500px] h-[500px] bg-[#7D3C98]/25 bottom-0 -left-20 animate-float-slow" style={{ animationDelay: "4s" }} />
+
+      <div className="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
+        <div className="section-label mb-5">07 — Let&apos;s Talk</div>
+        <h2 className="font-display font-black tracking-tighter leading-[0.92] text-white text-5xl md:text-6xl lg:text-7xl">
+          Let&apos;s build <span className="font-serif-italic font-normal text-gradient-warm">something</span><br />
+          that matters.
+        </h2>
+        <p className="mt-7 text-lg md:text-xl text-white/65 max-w-2xl mx-auto font-light leading-relaxed">
+          Always curious to meet other students, researchers, mentors, and builders. Reach out — even just to say hello.
+        </p>
+
+        <div className="mt-12 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          {links.map(({ icon: Icon, label, value, href, testId }, i) => (
+            <motion.a
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel="noreferrer noopener"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ y: -4 }}
+              data-testid={testId}
+              className="group glass rounded-2xl p-5 text-left hover:border-[#FF6B6B]/40 transition-colors"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <Icon size={20} className="text-[#F4A261]" />
+                <ArrowUpRight size={16} className="text-white/30 group-hover:text-[#FF6B6B] group-hover:rotate-12 transition-all" />
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-white/45 font-semibold mb-1">
+                {label}
+              </div>
+              <div className="font-display font-semibold text-white truncate">{value}</div>
+            </motion.a>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <a
+            href={`mailto:${SITE.email}`}
+            className="btn-primary"
+            data-testid="connect-send-email-btn"
+          >
+            <Mail size={18} /> Send a Message
+          </a>
+          <a
+            href={SITE.resumeUrl}
+            download
+            className="btn-ghost"
+            data-testid="connect-resume-btn"
+          >
+            <Download size={16} /> Download Resume
+          </a>
+        </div>
+
+        <div className="mt-24 pt-12 border-t border-white/5">
+          <p className="font-serif-italic text-2xl md:text-3xl text-white/80 max-w-3xl mx-auto leading-snug">
+            &ldquo;Technology becomes meaningful when it improves human lives.&rdquo;
+          </p>
+          <div className="mt-10 text-xs uppercase tracking-[0.3em] text-white/40 font-semibold">
+            {SITE.name}
+          </div>
+          <div className="mt-2 text-xs text-white/30">
+            © {new Date().getFullYear()} · Made with curiosity, coffee & quiet determination.
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
