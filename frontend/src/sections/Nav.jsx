@@ -26,10 +26,10 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="glass rounded-full px-5 md:px-7 py-3 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2.5 group" data-testid="nav-logo">
-            <span className="w-8 h-8 rounded-full bg-gradient-to-br from-[#FF6B6B] via-[#C44569] to-[#7D3C98] flex items-center justify-center text-[11px] font-bold font-display text-white">
+            <span className="w-8 h-8 rounded-full bg-gradient-to-br from-[#FF8E72] via-[#F76C5E] to-[#E8A53A] flex items-center justify-center text-[11px] font-bold font-display text-white shadow-sm">
               {SITE.initials}
             </span>
-            <span className="hidden sm:inline font-display font-semibold tracking-tight text-white/90">
+            <span className="hidden sm:inline font-display font-semibold tracking-tight text-[#1F1B16]">
               {SITE.shortName}
             </span>
           </a>
@@ -40,7 +40,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 data-testid={`nav-link-${l.label.toLowerCase()}`}
-                className="text-sm text-white/70 hover:text-white transition-colors font-medium"
+                className="text-sm text-[#5C5247] hover:text-[#1F1B16] transition-colors font-medium"
               >
                 {l.label}
               </a>
@@ -58,7 +58,7 @@ export default function Nav() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-[#1F1B16]"
             aria-label="Toggle menu"
             data-testid="nav-menu-toggle"
           >
@@ -78,7 +78,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-white/80 hover:text-white text-sm py-1"
+                className="text-[#3D3530] hover:text-[#1F1B16] text-sm py-1"
               >
                 {l.label}
               </a>

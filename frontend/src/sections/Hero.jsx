@@ -13,11 +13,12 @@ export default function Hero() {
 
   return (
     <section id="top" className="relative min-h-screen pt-32 pb-16 overflow-hidden grain" data-testid="hero-section">
-      {/* Background blobs */}
+      {/* Soft sunny blobs */}
       <div className="absolute inset-0">
-        <div className="blob w-[520px] h-[520px] bg-[#FF6B6B]/25 -top-32 -left-24 animate-float-slow" />
-        <div className="blob w-[600px] h-[600px] bg-[#7D3C98]/30 top-1/3 -right-40 animate-float-slow" style={{ animationDelay: "3s" }} />
-        <div className="blob w-[420px] h-[420px] bg-[#F4A261]/20 bottom-0 left-1/3 animate-float-slow" style={{ animationDelay: "6s" }} />
+        <div className="blob w-[520px] h-[520px] bg-[#FFD6A5]/60 -top-32 -left-24 animate-float-slow" />
+        <div className="blob w-[600px] h-[600px] bg-[#F6C6EA]/45 top-1/3 -right-40 animate-float-slow" style={{ animationDelay: "3s" }} />
+        <div className="blob w-[420px] h-[420px] bg-[#CDEAC0]/55 bottom-0 left-1/3 animate-float-slow" style={{ animationDelay: "6s" }} />
+        <div className="blob w-[380px] h-[380px] bg-[#BFE0F2]/50 top-1/2 left-0 animate-float-slow" style={{ animationDelay: "8s" }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12 items-center">
@@ -29,8 +30,8 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8"
           >
-            <Sparkles size={14} className="text-[#F4A261]" />
-            <span className="text-xs tracking-[0.18em] uppercase text-white/70 font-medium">
+            <Sparkles size={14} className="text-[#E8A53A]" />
+            <span className="text-xs tracking-[0.18em] uppercase text-[#5C5247] font-medium">
               Personal Mission · 2025
             </span>
           </motion.div>
@@ -39,12 +40,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display font-black leading-[0.95] tracking-tighter text-white text-[2.6rem] sm:text-5xl md:text-6xl lg:text-[4.2rem]"
+            className="font-display font-black leading-[0.95] tracking-tighter text-[#1F1B16] text-[2.6rem] sm:text-5xl md:text-6xl lg:text-[4.2rem]"
             data-testid="hero-mission"
           >
             Building at the intersection of{" "}
             <span className="text-gradient-warm">Artificial Intelligence</span>,{" "}
-            <span className="font-serif-italic font-normal text-white/95">Computing</span>, and{" "}
+            <span className="font-serif-italic font-normal text-[#1F1B16]">Computing</span>, and{" "}
             <span className="text-gradient-plum">Human Impact</span>.
           </motion.h1>
 
@@ -52,7 +53,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="mt-6 text-lg md:text-xl text-white/65 max-w-2xl leading-relaxed font-light"
+            className="mt-6 text-lg md:text-xl text-[#5C5247] max-w-2xl leading-relaxed font-light"
           >
             {SITE.missionSub}
           </motion.p>
@@ -65,7 +66,7 @@ export default function Hero() {
             className="mt-8 flex items-center gap-3 flex-wrap"
             data-testid="hero-carousel"
           >
-            <span className="text-xs uppercase tracking-[0.24em] text-white/40 font-semibold">
+            <span className="text-xs uppercase tracking-[0.24em] text-[#8A8276] font-semibold">
               Exploring
             </span>
             <div className="h-7 overflow-hidden relative w-[260px]">
@@ -98,19 +99,18 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Name + university below */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.85 }}
-            className="mt-14 flex items-center gap-4 text-white/55"
+            className="mt-14 flex items-center gap-4 text-[#5C5247]"
           >
-            <div className="h-px w-12 bg-white/20" />
+            <div className="h-px w-12 bg-[#1F1B16]/15" />
             <div>
-              <div className="text-sm font-display font-medium text-white/85" data-testid="hero-name">
+              <div className="text-sm font-display font-medium text-[#1F1B16]" data-testid="hero-name">
                 {SITE.name}
               </div>
-              <div className="text-xs text-white/50 mt-0.5" data-testid="hero-university">
+              <div className="text-xs text-[#7C7468] mt-0.5" data-testid="hero-university">
                 {SITE.university} · {SITE.tagline}
               </div>
             </div>
@@ -125,35 +125,35 @@ export default function Hero() {
           className="lg:col-span-5 relative flex justify-center lg:justify-end"
         >
           <div className="relative w-[280px] sm:w-[340px] md:w-[400px] aspect-[4/5]">
-            {/* Outer glow */}
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#FF6B6B]/40 via-[#C44569]/30 to-[#7D3C98]/40 blur-2xl opacity-70" />
+            {/* Outer warm glow */}
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#FFB088]/60 via-[#FFD6A5]/50 to-[#F6C6EA]/50 blur-2xl opacity-90" />
             {/* Frame */}
-            <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden border border-white/10 glass-strong">
+            <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden border border-white shadow-[0_20px_60px_-20px_rgba(247,108,94,0.35)] bg-white">
               <img
                 src={SITE.heroPhoto}
                 alt="[Profile portrait placeholder]"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
+                style={{ filter: "saturate(1.05) brightness(1.02)" }}
                 data-testid="hero-photo"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#07050A]/70 via-transparent to-transparent" />
               {/* Floating chip */}
               <div className="absolute bottom-5 left-5 right-5 glass-strong rounded-2xl px-4 py-3 flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#F4A261] font-semibold">
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#E8A53A] font-semibold">
                     Currently
                   </div>
-                  <div className="text-sm font-display font-semibold text-white">
+                  <div className="text-sm font-display font-semibold text-[#1F1B16]">
                     Studying · Learning · Building
                   </div>
                 </div>
-                <span className="w-2 h-2 rounded-full bg-[#FF6B6B] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#F76C5E] animate-pulse" />
               </div>
             </div>
             {/* Corner notch */}
             <div className="absolute -top-3 -right-3 glass rounded-full px-3 py-1.5 flex items-center gap-1.5">
-              <Sparkles size={12} className="text-[#F4A261]" />
-              <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-semibold">
+              <Sparkles size={12} className="text-[#E8A53A]" />
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#3D3530] font-semibold">
                 est. 2025
               </span>
             </div>
@@ -164,15 +164,15 @@ export default function Hero() {
       {/* Scroll hint */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
+        animate={{ opacity: 0.7 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/40 text-[10px] tracking-[0.28em] uppercase font-semibold"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[#8A8276] text-[10px] tracking-[0.28em] uppercase font-semibold"
       >
         Scroll
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.6 }}
-          className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"
+          className="w-px h-8 bg-gradient-to-b from-[#1F1B16]/30 to-transparent"
         />
       </motion.div>
     </section>

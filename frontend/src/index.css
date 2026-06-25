@@ -6,25 +6,25 @@
 
 @layer base {
     :root {
-        --background: 260 30% 4%;
-        --foreground: 0 0% 100%;
-        --card: 260 26% 7%;
-        --card-foreground: 0 0% 98%;
-        --popover: 260 26% 7%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 8 100% 71%;
-        --primary-foreground: 260 30% 4%;
-        --secondary: 260 20% 14%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 260 15% 12%;
-        --muted-foreground: 250 6% 64%;
-        --accent: 28 87% 67%;
-        --accent-foreground: 260 30% 4%;
-        --destructive: 0 84% 60%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 260 18% 18%;
-        --input: 260 18% 18%;
-        --ring: 8 100% 71%;
+        --background: 38 50% 96%;
+        --foreground: 28 18% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 28 18% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 28 18% 12%;
+        --primary: 14 100% 67%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 38 30% 92%;
+        --secondary-foreground: 28 18% 12%;
+        --muted: 38 30% 92%;
+        --muted-foreground: 28 12% 42%;
+        --accent: 32 84% 56%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 75% 55%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 28 18% 88%;
+        --input: 28 18% 88%;
+        --ring: 14 100% 67%;
         --radius: 0.85rem;
     }
 }
@@ -40,8 +40,8 @@ html {
 body {
     margin: 0;
     font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #07050a;
-    color: #ffffff;
+    background: #fbf7ef;
+    color: #1f1b16;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -58,31 +58,40 @@ body {
 }
 
 .text-gradient-warm {
-    background: linear-gradient(120deg, #ff6b6b 0%, #f4a261 50%, #ffd6a5 100%);
+    background: linear-gradient(120deg, #f76c5e 0%, #ff8e72 40%, #e8a53a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-plum {
-    background: linear-gradient(120deg, #ff6b6b 0%, #c44569 40%, #7d3c98 100%);
+    background: linear-gradient(120deg, #f76c5e 0%, #c44569 50%, #b57bba 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-sky {
+    background: linear-gradient(120deg, #9fc1d9 0%, #8fb48f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .glass {
-    background: rgba(18, 13, 26, 0.55);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgba(31, 27, 22, 0.07);
+    box-shadow: 0 6px 20px -10px rgba(31, 27, 22, 0.08);
 }
 
 .glass-strong {
-    background: rgba(18, 13, 26, 0.85);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(31, 27, 22, 0.08);
+    box-shadow: 0 16px 40px -16px rgba(31, 27, 22, 0.12);
 }
 
 .grain::before {
@@ -90,9 +99,9 @@ body {
     position: absolute;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
-    opacity: 0.05;
+    opacity: 0.06;
     pointer-events: none;
-    mix-blend-mode: overlay;
+    mix-blend-mode: multiply;
 }
 
 .blob {
@@ -103,27 +112,24 @@ body {
     z-index: 0;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #07050a;
+    background: #fbf7ef;
 }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #ff6b6b, #7d3c98);
+    background: linear-gradient(180deg, #ff8e72, #e8a53a);
     border-radius: 10px;
-    border: 2px solid #07050a;
+    border: 2px solid #fbf7ef;
 }
 
-/* Selection */
 ::selection {
-    background: rgba(255, 107, 107, 0.35);
-    color: #fff;
+    background: rgba(255, 142, 114, 0.35);
+    color: #1f1b16;
 }
 
-/* Magnetic hover button */
 .btn-primary {
     position: relative;
     display: inline-flex;
@@ -134,11 +140,11 @@ body {
     font-family: "Outfit", sans-serif;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: #07050a;
-    background: linear-gradient(120deg, #ff6b6b, #f4a261);
+    color: #ffffff;
+    background: linear-gradient(120deg, #ff8e72 0%, #f76c5e 50%, #e8a53a 100%);
     box-shadow:
-        0 10px 30px -10px rgba(255, 107, 107, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        0 14px 30px -10px rgba(247, 108, 94, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
     transition:
         transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
         box-shadow 0.25s ease;
@@ -146,7 +152,7 @@ body {
 .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow:
-        0 18px 40px -12px rgba(255, 107, 107, 0.8),
+        0 20px 40px -12px rgba(247, 108, 94, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -158,14 +164,15 @@ body {
     border-radius: 999px;
     font-family: "Outfit", sans-serif;
     font-weight: 500;
-    color: #fff;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #1f1b16;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(31, 27, 22, 0.12);
     transition: all 0.25s ease;
 }
 .btn-ghost:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 107, 107, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(247, 108, 94, 0.5);
+    transform: translateY(-1px);
 }
 
 .section-label {
@@ -173,7 +180,7 @@ body {
     font-size: 0.72rem;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #ff6b6b;
+    color: #f76c5e;
     font-weight: 600;
 }
 

@@ -9,17 +9,16 @@ export default function Certificates() {
 
   const filtered = filter === "All" ? CERTIFICATES : CERTIFICATES.filter((c) => c.category === filter);
 
-  // Vary heights to create masonry feel via column-count
   return (
     <section id="certificates" className="relative py-28 md:py-40" data-testid="certificates-section">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div>
             <div className="section-label mb-4">06 — Achievement Museum</div>
-            <h2 className="font-display font-black tracking-tighter leading-[0.95] text-white text-5xl md:text-6xl">
+            <h2 className="font-display font-black tracking-tighter leading-[0.95] text-[#1F1B16] text-5xl md:text-6xl">
               Certificate <span className="font-serif-italic font-normal text-gradient-warm">Gallery</span>
             </h2>
-            <p className="mt-5 text-white/55 text-base md:text-lg font-light max-w-xl">
+            <p className="mt-5 text-[#5C5247] text-base md:text-lg font-light max-w-xl">
               A curated archive of learning — each one a small commitment kept.
             </p>
           </div>
@@ -32,8 +31,8 @@ export default function Certificates() {
                 data-testid={`cert-filter-${cat.toLowerCase().replace(/\s+/g, "-")}`}
                 className={`text-xs uppercase tracking-[0.18em] font-semibold rounded-full px-4 py-2 transition-all ${
                   filter === cat
-                    ? "bg-gradient-to-r from-[#FF6B6B] to-[#F4A261] text-[#07050A] shadow-lg shadow-[#FF6B6B]/30"
-                    : "glass text-white/70 hover:text-white hover:border-white/20"
+                    ? "bg-gradient-to-r from-[#F76C5E] to-[#E8A53A] text-white shadow-md shadow-[#F76C5E]/25"
+                    : "glass text-[#5C5247] hover:text-[#1F1B16] hover:border-[#F76C5E]/30"
                 }`}
               >
                 {cat}
@@ -51,19 +50,19 @@ export default function Certificates() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass rounded-2xl p-6 border-dashed"
-                style={{ borderStyle: "dashed", borderColor: "rgba(255,255,255,0.08)" }}
+                className="glass rounded-2xl p-6"
+                style={{ borderStyle: "dashed", borderColor: "rgba(31,27,22,0.15)" }}
               >
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                  <Award size={18} className="text-white/30" />
+                <div className="w-10 h-10 rounded-xl bg-[#1F1B16]/5 border border-[#1F1B16]/8 flex items-center justify-center mb-4">
+                  <Award size={18} className="text-[#8A8276]" />
                 </div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-white/35 font-semibold mb-2">
+                <div className="text-[10px] uppercase tracking-[0.22em] text-[#A89E90] font-semibold mb-2">
                   Coming soon
                 </div>
-                <div className="font-display font-semibold text-white/55 leading-snug">
+                <div className="font-display font-semibold text-[#5C5247] leading-snug">
                   A new chapter, waiting to be earned.
                 </div>
-                <p className="text-xs text-white/35 mt-2 leading-relaxed">
+                <p className="text-xs text-[#8A8276] mt-2 leading-relaxed">
                   Certificates will appear here as I complete them — each one a small commitment kept.
                 </p>
               </motion.div>
@@ -74,45 +73,45 @@ export default function Certificates() {
             layout
             className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:break-inside-avoid [&>*]:mb-5"
           >
-          <AnimatePresence>
-            {filtered.map((c, i) => (
-              <motion.button
-                key={c.title}
-                layout
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.4, delay: i * 0.04 }}
-                whileHover={{ y: -4 }}
-                onClick={() => setOpen(c)}
-                data-testid={`cert-card-${i}`}
-                className="group w-full text-left glass rounded-2xl p-5 hover:border-[#FF6B6B]/40 transition-colors block"
-                style={{
-                  paddingBottom: ["1.5rem", "2.5rem", "1.75rem"][i % 3],
-                }}
-              >
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6B6B]/25 to-[#7D3C98]/25 border border-white/10 flex items-center justify-center">
-                    <Award size={18} className="text-[#F4A261]" />
+            <AnimatePresence>
+              {filtered.map((c, i) => (
+                <motion.button
+                  key={c.title}
+                  layout
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  whileHover={{ y: -4 }}
+                  onClick={() => setOpen(c)}
+                  data-testid={`cert-card-${i}`}
+                  className="group w-full text-left glass rounded-2xl p-5 hover:border-[#F76C5E]/40 transition-colors block"
+                  style={{
+                    paddingBottom: ["1.5rem", "2.5rem", "1.75rem"][i % 3],
+                  }}
+                >
+                  <div className="flex items-start justify-between gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFD6A5] to-[#F6C6EA] border border-[#1F1B16]/5 flex items-center justify-center">
+                      <Award size={18} className="text-[#E8A53A]" />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-[#8A8276] font-semibold">
+                      {c.category}
+                    </span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.18em] text-white/45 font-semibold">
-                    {c.category}
-                  </span>
-                </div>
-                <h3 className="font-display font-bold text-lg text-white mb-1 group-hover:text-gradient-warm transition-colors">
-                  {c.title}
-                </h3>
-                <p className="text-sm text-white/55 leading-relaxed font-light">{c.org}</p>
-                <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
-                  <span className="text-xs text-white/50 font-medium">{c.date}</span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#FF6B6B] font-semibold group-hover:underline">
-                    Preview →
-                  </span>
-                </div>
-              </motion.button>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                  <h3 className="font-display font-bold text-lg text-[#1F1B16] mb-1 group-hover:text-gradient-warm transition-colors">
+                    {c.title}
+                  </h3>
+                  <p className="text-sm text-[#6B6357] leading-relaxed font-light">{c.org}</p>
+                  <div className="flex items-center justify-between mt-4 pt-4 border-t border-[#1F1B16]/8">
+                    <span className="text-xs text-[#7C7468] font-medium">{c.date}</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#F76C5E] font-semibold group-hover:underline">
+                      Preview →
+                    </span>
+                  </div>
+                </motion.button>
+              ))}
+            </AnimatePresence>
+          </motion.div>
         )}
       </div>
 
@@ -124,7 +123,7 @@ export default function Certificates() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setOpen(null)}
-            className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-md flex items-center justify-center p-6"
+            className="fixed inset-0 z-[100] bg-[#1F1B16]/40 backdrop-blur-md flex items-center justify-center p-6"
             data-testid="cert-modal"
           >
             <motion.div
@@ -136,30 +135,30 @@ export default function Certificates() {
             >
               <button
                 onClick={() => setOpen(null)}
-                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/70"
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#1F1B16]/5 hover:bg-[#1F1B16]/10 flex items-center justify-center text-[#5C5247]"
                 data-testid="cert-modal-close"
                 aria-label="Close"
               >
                 <X size={16} />
               </button>
 
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FF6B6B] to-[#F4A261] flex items-center justify-center mb-5 shadow-lg">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#F76C5E] to-[#E8A53A] flex items-center justify-center mb-5 shadow-lg">
                 <Award size={26} className="text-white" />
               </div>
 
-              <div className="text-[10px] uppercase tracking-[0.22em] text-[#F4A261] font-semibold mb-2">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-[#E8A53A] font-semibold mb-2">
                 {open.category}
               </div>
-              <h3 className="font-display font-black text-2xl md:text-3xl text-white tracking-tight mb-2">
+              <h3 className="font-display font-black text-2xl md:text-3xl text-[#1F1B16] tracking-tight mb-2">
                 {open.title}
               </h3>
-              <p className="text-white/65 leading-relaxed mb-5">{open.org}</p>
+              <p className="text-[#5C5247] leading-relaxed mb-5">{open.org}</p>
 
               <div className="flex items-center justify-between glass rounded-xl px-4 py-3 mb-5">
-                <span className="text-xs uppercase tracking-[0.18em] text-white/50 font-semibold">
+                <span className="text-xs uppercase tracking-[0.18em] text-[#8A8276] font-semibold">
                   Completed
                 </span>
-                <span className="font-display font-semibold text-white">{open.date}</span>
+                <span className="font-display font-semibold text-[#1F1B16]">{open.date}</span>
               </div>
 
               <a

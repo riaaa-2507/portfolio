@@ -3,7 +3,7 @@ export const SITE = {
   name: "Riya Singh",
   shortName: "Riya",
   initials: "RS",
-  university: "Motilal Nehru College, University of Delhi · B.Sc. Physical Science with Computer Science (2025–2028)",
+  university: "Motilal Nehru College, University of Delhi · B.Sc. Physical Science with Computer Science (2025–2029)",
   tagline: "Student · Builder · Data Enthusiast · Exploring AI & Technology",
   mission:
     "Building at the intersection of Artificial Intelligence, Computing, and Human Impact.",
@@ -16,7 +16,7 @@ export const SITE = {
   // To use your real photo: upload it to /app/frontend/public/profile.jpg and change this to "/profile.jpg",
   // or paste a direct image URL (Google Photos share links don't work as <img src>).
   heroPhoto:
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
   carousel: [
     "Data Analysis",
     "Artificial Intelligence",

@@ -13,7 +13,7 @@ import "@/App.css";
 
 function Home() {
   return (
-    <main className="relative bg-[#07050A] text-white min-h-screen" data-testid="home-page">
+    <main className="relative bg-[#FBF7EF] text-[#1F1B16] min-h-screen" data-testid="home-page">
       <Nav />
       <Hero />
       <Vision />
