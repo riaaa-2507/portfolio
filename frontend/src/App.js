@@ -7,6 +7,7 @@ import Journey from "@/sections/Journey";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Achievements from "@/sections/Achievements";
+import Community from "@/sections/Community";
 import Certificates from "@/sections/Certificates";
 import Connect from "@/sections/Connect";
 import "@/App.css";
@@ -21,6 +22,7 @@ function Home() {
       <Skills />
       <Projects />
       <Achievements />
+      <Community />
       <Certificates />
       <Connect />
     </main>

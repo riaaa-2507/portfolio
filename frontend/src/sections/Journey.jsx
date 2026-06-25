@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { JOURNEY, SITE } from "@/content";
+import { JOURNEY } from "@/content";
 
 export default function Journey() {
   return (
@@ -9,7 +9,7 @@ export default function Journey() {
       <div className="blob w-[380px] h-[380px] bg-[#F6C6EA]/40 bottom-1/4 -left-20" />
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-10">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
           <div>
             <div className="section-label mb-4">02 — The Story</div>
             <h2 className="font-display font-black tracking-tighter leading-[0.95] text-[#1F1B16] text-5xl md:text-6xl">
@@ -20,36 +20,6 @@ export default function Journey() {
             From a single line of code to a clearer sense of purpose — every step shaped the next.
           </p>
         </div>
-
-        {/* Campus visual — sets the academic, sunlit scene */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8 }}
-          className="relative mb-16 md:mb-24 rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-[#1F1B16]/8 shadow-[0_24px_60px_-24px_rgba(247,108,94,0.25)] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-[#FFD6A5]/30"
-          data-testid="journey-campus-photo"
-        >
-          <img
-            src={SITE.campusPhoto}
-            alt="Riya on campus at Motilal Nehru College, University of Delhi"
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ filter: "saturate(1.05) brightness(1.02)" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/35 via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 glass-strong rounded-2xl px-4 py-3 max-w-[88%] sm:max-w-sm">
-            <div className="text-[10px] uppercase tracking-[0.22em] text-[#E8A53A] font-semibold mb-1">
-              On Campus
-            </div>
-            <div className="text-sm md:text-base font-display font-semibold text-[#1F1B16] leading-snug">
-              Motilal Nehru College · University of Delhi
-            </div>
-            <div className="text-xs text-[#5C5247] mt-0.5 font-light">
-              Where the next chapters are being written.
-            </div>
-          </div>
-        </motion.div>
 
         <div className="relative">
           {/* Vertical line */}

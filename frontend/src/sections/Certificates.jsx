@@ -14,7 +14,7 @@ export default function Certificates() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div>
-            <div className="section-label mb-4">06 — Achievement Museum</div>
+            <div className="section-label mb-4">07 — Achievement Museum</div>
             <h2 className="font-display font-black tracking-tighter leading-[0.95] text-[#1F1B16] text-5xl md:text-6xl">
               Certificate <span className="font-serif-italic font-normal text-gradient-warm">Gallery</span>
             </h2>

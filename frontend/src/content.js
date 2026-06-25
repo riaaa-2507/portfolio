@@ -13,8 +13,8 @@ export const SITE = {
   github: "https://github.com/riaaa-2507",
   linkedin: "https://www.linkedin.com/in/riya-s-751998330",
   resumeUrl: "/resume-placeholder.pdf",
-  // Local profile & campus images (auto-rotated to correct orientation, served from /public)
-  heroPhoto: "/profile.jpg",
+  // Featured identity image (campus photograph). The previous close-up portrait was removed per request.
+  heroPhoto: "/campus.jpg",
   campusPhoto: "/campus.jpg",
   carousel: [
     "Data Analysis",
@@ -155,3 +155,25 @@ export const ACHIEVEMENTS = [
 export const CERTIFICATES = [];
 
 export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leadership", "Other Learning"];
+
+// Community / Social Impact section — WDC pad drive
+export const COMMUNITY = {
+  description:
+    "Participated in a menstrual hygiene awareness and sanitary pad distribution drive organized through the Women's Development Cell (WDC). The initiative focused on community outreach, awareness, and supporting women's health and dignity. This experience strengthened my understanding of social responsibility, teamwork, and grassroots engagement.",
+  // Replace with the official Instagram post URL when available
+  instagramUrl: "#",
+  values: [
+    { label: "Empathy", body: "Listening before assuming." },
+    { label: "Teamwork", body: "Showing up for others." },
+    { label: "Awareness", body: "Conversation as care." },
+    { label: "Service", body: "Small acts, real impact." },
+  ],
+  // Each gallery item: { step, caption, url }. Leave url as null to show an elegant placeholder.
+  // Drop event photos into /app/frontend/public/community/ and set url: "/community/01.jpg" etc.
+  gallery: [
+    { step: "Step 01", caption: "Preparation — packing kits and planning the route.", url: null },
+    { step: "Step 02", caption: "On the ground — distributing pads with the team.", url: null },
+    { step: "Step 03", caption: "Conversations — sharing awareness and answering questions.", url: null },
+    { step: "Step 04", caption: "Reflections — the team after a meaningful day.", url: null },
+  ],
+};

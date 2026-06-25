@@ -17,7 +17,7 @@ export default function Connect() {
       <div className="blob w-[400px] h-[400px] bg-[#CDEAC0]/40 top-1/3 left-1/4 animate-float-slow" style={{ animationDelay: "6s" }} />
 
       <div className="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
-        <div className="section-label mb-5">07 — Let&apos;s Talk</div>
+        <div className="section-label mb-5">08 — Let&apos;s Talk</div>
         <h2 className="font-display font-black tracking-tighter leading-[0.92] text-[#1F1B16] text-5xl md:text-6xl lg:text-7xl">
           Let&apos;s build <span className="font-serif-italic font-normal text-gradient-warm">something</span><br />
           that matters.
