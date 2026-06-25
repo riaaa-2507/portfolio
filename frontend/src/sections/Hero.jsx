@@ -144,7 +144,7 @@ export default function Hero() {
                     Currently
                   </div>
                   <div className="text-sm font-display font-semibold text-white">
-                    Studying · Researching · Building
+                    Studying · Learning · Building
                   </div>
                 </div>
                 <span className="w-2 h-2 rounded-full bg-[#FF6B6B] animate-pulse" />
@@ -154,7 +154,7 @@ export default function Hero() {
             <div className="absolute -top-3 -right-3 glass rounded-full px-3 py-1.5 flex items-center gap-1.5">
               <Sparkles size={12} className="text-[#F4A261]" />
               <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-semibold">
-                est. 2017
+                est. 2025
               </span>
             </div>
           </div>

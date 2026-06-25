@@ -42,10 +42,38 @@ export default function Certificates() {
           </div>
         </div>
 
-        <motion.div
-          layout
-          className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:break-inside-avoid [&>*]:mb-5"
-        >
+        {filtered.length === 0 ? (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="cert-empty-state">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="glass rounded-2xl p-6 border-dashed"
+                style={{ borderStyle: "dashed", borderColor: "rgba(255,255,255,0.08)" }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4">
+                  <Award size={18} className="text-white/30" />
+                </div>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-white/35 font-semibold mb-2">
+                  Coming soon
+                </div>
+                <div className="font-display font-semibold text-white/55 leading-snug">
+                  A new chapter, waiting to be earned.
+                </div>
+                <p className="text-xs text-white/35 mt-2 leading-relaxed">
+                  Certificates will appear here as I complete them — each one a small commitment kept.
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            layout
+            className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:break-inside-avoid [&>*]:mb-5"
+          >
           <AnimatePresence>
             {filtered.map((c, i) => (
               <motion.button
@@ -85,6 +113,7 @@ export default function Certificates() {
             ))}
           </AnimatePresence>
         </motion.div>
+        )}
       </div>
 
       {/* Modal */}

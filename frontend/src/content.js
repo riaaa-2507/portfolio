@@ -1,19 +1,20 @@
 // Centralized site content — edit these placeholders without touching design.
 export const SITE = {
-  name: "[Your Name]",
-  shortName: "[Your Name]",
-  initials: "YN",
-  university: "[Your University]",
-  tagline: "Student · Builder · Researcher",
+  name: "Riya Singh",
+  shortName: "Riya",
+  initials: "RS",
+  university: "Motilal Nehru College, University of Delhi · B.Sc. Physical Science with Computer Science (2025–2028)",
+  tagline: "Student · Builder · Data Enthusiast · Exploring AI & Technology",
   mission:
     "Building at the intersection of Artificial Intelligence, Computing, and Human Impact.",
   missionSub:
-    "A student, creator, and lifelong learner exploring how technology can improve lives.",
-  email: "[your.email@example.com]",
-  github: "https://github.com/your-handle",
-  linkedin: "https://linkedin.com/in/your-handle",
+    "Curious mind, lifelong learner, and aspiring technologist exploring the intersections of computation, data, research, and meaningful impact.",
+  email: "riyas25707@gmail.com",
+  github: "https://github.com/riaaa-2507",
+  linkedin: "https://www.linkedin.com/in/riya-s-751998330",
   resumeUrl: "/resume-placeholder.pdf",
-  // Hero photo placeholder (replaceable). Designer-curated portrait.
+  // To use your real photo: upload it to /app/frontend/public/profile.jpg and change this to "/profile.jpg",
+  // or paste a direct image URL (Google Photos share links don't work as <img src>).
   heroPhoto:
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
   carousel: [
@@ -36,7 +37,7 @@ export const VISION = {
     "Beyond code, I believe in equality of opportunity, in lifting others as I climb, and in using whatever I learn to leave the world a little brighter for the next student who dares to imagine.",
   ],
   pillars: [
-    { label: "Curiosity", body: "Reading widely across CS, cognition, and design." },
+    { label: "Curiosity", body: "Reading widely across CS, data, and ideas." },
     { label: "Craft", body: "Engineering that values clarity over cleverness." },
     { label: "Impact", body: "Technology that meets real human needs." },
     { label: "Equity", body: "Building doors, not gates." },
@@ -44,71 +45,114 @@ export const VISION = {
 };
 
 export const JOURNEY = [
-  { year: "2017", title: "Where the spark began", body: "Built my first website at school — a tiny gallery for the science club. It changed everything." },
-  { year: "2020", title: "School milestones", body: "Top of the cohort in Mathematics and Computer Science. Started learning Python on weekends." },
-  { year: "2022", title: "University admission", body: "Admitted to [Your University] to study Computer Science. First taste of formal CS theory and algorithms." },
-  { year: "2023", title: "First research exposure", body: "Joined a student research circle exploring AI for accessibility. Co-authored an internal report." },
-  { year: "2024", title: "Certifications & projects", body: "Earned key data analytics & ML certifications. Shipped two open-source side projects." },
-  { year: "2025", title: "Leadership & community", body: "Led a campus initiative mentoring younger students in coding and problem solving." },
-  { year: "Next", title: "What's ahead", body: "Graduate research in AI for social good, industry experience, and continued lifelong learning." },
+  {
+    year: "2023",
+    title: "Completed Senior Secondary Education",
+    body: "Strengthened my interest in mathematics, science, and technology — the early sparks that pointed me toward computing.",
+  },
+  {
+    year: "2025",
+    title: "Joined University of Delhi",
+    body: "Began B.Sc. Physical Science with Computer Science at Motilal Nehru College — my first formal step into the world of CS.",
+  },
+  {
+    year: "2025",
+    title: "Began Exploring Programming Seriously",
+    body: "Focused on Python, C++, and problem-solving — building intuition through practice and patience.",
+  },
+  {
+    year: "2026",
+    title: "Started Learning Git & GitHub",
+    body: "Beginning to understand version control, open-source workflows, and how to organize my coding journey publicly.",
+  },
+  {
+    year: "2026",
+    title: "Entered Data Analytics",
+    body: "Learning spreadsheets, data analysis principles, visualization, and data storytelling through coursework and practical exercises.",
+  },
+  {
+    year: "2026",
+    title: "Built My First Personal Website",
+    body: "Designed and shipped a digital identity from the ground up — learning modern web development by doing.",
+  },
+  {
+    year: "Next",
+    title: "AI, Data, and Research",
+    body: "Exploring the intersection of computation, analytics, scientific thinking, and meaningful social impact.",
+  },
 ];
 
 export const SKILLS = {
   Programming: ["Python", "C++", "Java", "JavaScript"],
   Data: ["Data Analysis", "Visualization", "Statistics", "SQL"],
-  Technology: ["Artificial Intelligence", "Machine Learning", "Web Development", "Cloud Basics"],
+  Technology: ["Artificial Intelligence", "Machine Learning", "Web Development", "Git & GitHub"],
   "Soft Skills": ["Communication", "Curiosity", "Leadership", "Problem Solving", "Adaptability"],
 };
 
 export const PROJECTS = [
   {
-    title: "[Project One — Title]",
-    blurb: "A data storytelling dashboard exploring inequities in access to digital learning resources across regions.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-    tech: ["Python", "Pandas", "Plotly", "Streamlit"],
+    title: "Personal Portfolio Website",
+    blurb:
+      "Designing and developing a modern personal website that reflects my journey, skills, ambitions, and growth in technology. In progress.",
+    image:
+      "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    tech: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     github: "#",
     demo: "#",
-    learnings: "Designing for clarity is harder — and more valuable — than designing for sophistication.",
+    learnings:
+      "Learning web development by building a real product from scratch — understanding every design and technical decision.",
   },
   {
-    title: "[Project Two — Title]",
-    blurb: "A small ML model that classifies handwritten regional scripts, packaged with an explanation layer.",
-    image: "https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    tech: ["PyTorch", "FastAPI", "React"],
-    github: "#",
-    demo: "#",
-    learnings: "Interpretability matters even at the smallest scale — especially when stakes are personal.",
+    title: "Double Discrimination: Caste & Gender in India",
+    blurb:
+      "A research project for the Women's Development Cell exploring the intersection of caste and gender in India through structured investigation and reporting.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    tech: ["Research Methods", "Data Collection", "Documentation", "Web Research"],
+    github: "https://docs.google.com/document/d/1qyaJp4glcojpsU6luxRaT2e45yDPO7y2YKEtcstlwxA/edit?usp=sharing",
+    demo: "https://www.instagram.com/p/DVWOVlOAIs7/?igsh=MWNwYnM0YzVzc29sag==",
+    learnings:
+      "Learned how to investigate real-world issues, organize findings, and communicate insights effectively.",
   },
   {
-    title: "[Project Three — Title]",
-    blurb: "An open-source utility helping students summarize lecture transcripts with citations preserved.",
-    image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-    tech: ["Node.js", "LangChain", "Tailwind"],
+    title: "Python & SQL — School Project",
+    blurb:
+      "My first major programming project — combining Python and SQL to solve a practical problem and introducing me to software development concepts.",
+    image:
+      "https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    tech: ["Python", "SQL"],
     github: "#",
     demo: "#",
-    learnings: "Citations are not friction — they are trust. Build them in from day one.",
+    learnings:
+      "Developed problem-solving skills and gained my first experience integrating programming with databases.",
+  },
+  {
+    title: "Data Analytics Projects",
+    blurb:
+      "A collection of upcoming projects involving data cleaning, visualization, storytelling, and analytical problem-solving. Coming soon.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    tech: ["Python", "Spreadsheets", "SQL", "Data Visualization"],
+    github: "#",
+    demo: "#",
+    learnings:
+      "Building the foundations required to transform raw data into meaningful insights.",
   },
 ];
 
+// Honest, in-progress milestones — designed to grow over time.
 export const ACHIEVEMENTS = [
-  { number: "12+", label: "Certifications earned" },
-  { number: "9", label: "Projects shipped" },
-  { number: "20+", label: "Technologies explored" },
-  { number: "3", label: "Academic awards" },
-  { number: "150+", label: "Hours mentoring" },
-  { number: "5", label: "Competitions & hackathons" },
+  { number: "Year 1", label: "Of my Bachelor's journey" },
+  { number: "1", label: "Research project (WDC)" },
+  { number: "4", label: "Active projects in motion" },
+  { number: "5+", label: "Technologies exploring" },
+  { number: "2025", label: "Year I began building publicly" },
+  { number: "∞", label: "Curiosity to keep going" },
 ];
 
-export const CERTIFICATES = [
-  { title: "Python for Everybody", org: "Coursera · University of Michigan", date: "2023", category: "Programming", verify: "#" },
-  { title: "Data Analysis with Python", org: "IBM", date: "2024", category: "Data Analytics", verify: "#" },
-  { title: "Machine Learning Specialization", org: "DeepLearning.AI", date: "2024", category: "Programming", verify: "#" },
-  { title: "Google Data Analytics", org: "Google", date: "2024", category: "Data Analytics", verify: "#" },
-  { title: "Leadership Foundations", org: "LinkedIn Learning", date: "2024", category: "Leadership", verify: "#" },
-  { title: "Statistics with R", org: "Duke University", date: "2023", category: "Data Analytics", verify: "#" },
-  { title: "Public Speaking Essentials", org: "Toastmasters", date: "2025", category: "Leadership", verify: "#" },
-  { title: "Intro to Research Methods", org: "Coursera", date: "2024", category: "Other Learning", verify: "#" },
-  { title: "Design Thinking", org: "IDEO U", date: "2025", category: "Other Learning", verify: "#" },
-];
+// Certificates — empty for now. Add your certificates here as you earn them.
+// Format: { title, org, date, category, verify }
+// Categories: "Programming" | "Data Analytics" | "Leadership" | "Other Learning"
+export const CERTIFICATES = [];
 
 export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leadership", "Other Learning"];

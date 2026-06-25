@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
+import { Github, ExternalLink, ArrowUpRight, FileText, Instagram, Link as LinkIcon } from "lucide-react";
 import { PROJECTS } from "@/content";
+
+function linkMeta(url) {
+  if (!url || url === "#" || url === "none") return null;
+  if (url.includes("github.com")) return { label: "GitHub", Icon: Github };
+  if (url.includes("docs.google.com")) return { label: "Document", Icon: FileText };
+  if (url.includes("instagram.com")) return { label: "Published", Icon: Instagram };
+  return { label: "Live Demo", Icon: ExternalLink };
+}
 
 export default function Projects() {
   return (
@@ -19,7 +27,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
           {PROJECTS.map((p, i) => (
             <motion.article
               key={i}
@@ -71,27 +79,46 @@ export default function Projects() {
                   <p className="text-sm text-white/70 italic leading-relaxed">&ldquo;{p.learnings}&rdquo;</p>
                 </div>
 
-                <div className="flex items-center gap-3 mt-auto">
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors"
-                    data-testid={`project-${i}-github`}
-                  >
-                    <Github size={14} /> GitHub
-                  </a>
-                  <span className="w-1 h-1 rounded-full bg-white/20" />
-                  <a
-                    href={p.demo}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="flex items-center gap-1.5 text-xs text-[#FF6B6B] hover:text-[#F4A261] transition-colors font-semibold"
-                    data-testid={`project-${i}-demo`}
-                  >
-                    Live Demo <ExternalLink size={12} />
-                  </a>
-                </div>
+                {(() => {
+                  const a = linkMeta(p.github);
+                  const b = linkMeta(p.demo);
+                  if (!a && !b) {
+                    return (
+                      <div className="flex items-center gap-2 mt-auto" data-testid={`project-${i}-no-links`}>
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-semibold flex items-center gap-1.5">
+                          <LinkIcon size={12} /> Links coming soon
+                        </span>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div className="flex items-center gap-3 mt-auto flex-wrap">
+                      {a && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors"
+                          data-testid={`project-${i}-github`}
+                        >
+                          <a.Icon size={14} /> {a.label}
+                        </a>
+                      )}
+                      {a && b && <span className="w-1 h-1 rounded-full bg-white/20" />}
+                      {b && (
+                        <a
+                          href={p.demo}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="flex items-center gap-1.5 text-xs text-[#FF6B6B] hover:text-[#F4A261] transition-colors font-semibold"
+                          data-testid={`project-${i}-demo`}
+                        >
+                          {b.label} <b.Icon size={12} />
+                        </a>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
             </motion.article>
           ))}
