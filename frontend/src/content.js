@@ -159,21 +159,9 @@ export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leaders
 // Community / Social Impact section — WDC pad drive
 export const COMMUNITY = {
   description:
-    "Participated in a menstrual hygiene awareness and sanitary pad distribution drive organized through the Women's Development Cell (WDC). The initiative focused on community outreach, awareness, and supporting women's health and dignity. This experience strengthened my understanding of social responsibility, teamwork, and grassroots engagement.",
+    "Participated in a menstrual hygiene awareness and sanitary pad distribution initiative organized through the Women's Development Cell (WDC). The experience involved community outreach, teamwork, and promoting awareness about women's health and dignity, reinforcing the importance of social responsibility alongside academic and technical growth.",
   // Replace with the official Instagram post URL when available
   instagramUrl: "#",
-  values: [
-    { label: "Empathy", body: "Listening before assuming." },
-    { label: "Teamwork", body: "Showing up for others." },
-    { label: "Awareness", body: "Conversation as care." },
-    { label: "Service", body: "Small acts, real impact." },
-  ],
-  // Each gallery item: { step, caption, url }. Leave url as null to show an elegant placeholder.
-  // Drop event photos into /app/frontend/public/community/ and set url: "/community/01.jpg" etc.
-  gallery: [
-    { step: "Step 01", caption: "Preparation — packing kits and planning the route.", url: null },
-    { step: "Step 02", caption: "On the ground — distributing pads with the team.", url: null },
-    { step: "Step 03", caption: "Conversations — sharing awareness and answering questions.", url: null },
-    { step: "Step 04", caption: "Reflections — the team after a meaningful day.", url: null },
-  ],
+  // Short context tag shown next to the CTA
+  contextTag: "Women's Development Cell · Motilal Nehru College",
 };
