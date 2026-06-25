@@ -94,7 +94,7 @@ export const PROJECTS = [
     blurb:
       "Designing and developing a modern personal website that reflects my journey, skills, ambitions, and growth in technology. In progress.",
     image:
-      "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+      "webproject.png",
     tech: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     github: "#",
     demo: "#",
