@@ -1,0 +1,109 @@
+{
+  "theme_and_archetype": {
+    "domain": "Personal Portfolio / Digital Identity",
+    "theme": "Dark Mode Default",
+    "archetype": "Archetype 5 (Luxury) mixed with Archetype 3 (Warm/Pastel) Accents",
+    "vibe": "Warm Luxury / Intellectual Expressive - Confident, ambitious, bright, deeply personal, and socially conscious.",
+    "design_philosophy": "Fusion of high-end premium aesthetics with energetic, warm feminine touches. Not generic corporate, not aggressively cyberpunk. It strikes a balance between 'elegant professional' and 'passionate builder'."
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "font_pairings_reasoning": "Outfit provides a geometric, elegant, and youthful confidence for headings, escaping the standard 'Inter' look. Manrope provides extreme clarity and a premium tech-forward aesthetic for body copy.",
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl lg:text-[4rem] tracking-tighter font-black leading-none",
+      "h2": "text-3xl md:text-4xl lg:text-5xl tracking-tight font-bold",
+      "h3": "text-xl md:text-2xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed font-light text-white/70",
+      "labels": "text-xs uppercase tracking-[0.2em] font-semibold text-accent-coral"
+    }
+  },
+  "color_palette": {
+    "background": "#07050A",
+    "surface": "#120D1A",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A19DAA",
+      "inverse": "#07050A"
+    },
+    "accents": {
+      "coral": "#FF6B6B",
+      "warm_gold": "#F4A261",
+      "plum": "#7D3C98",
+      "teal_subtle": "#2A9D8F"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at top right, rgba(255,107,107,0.15), transparent 40%)",
+      "card_hover": "linear-gradient(135deg, rgba(255,107,107,0.1) 0%, rgba(125,60,152,0.1) 100%)",
+      "text_gradient": "bg-gradient-to-r from-[#FF6B6B] to-[#F4A261] bg-clip-text text-transparent"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing. Use p-8, p-12, or p-16 for section padding to allow breathing room.",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "bento_grid": "Used for Skills & Achievements. grid-cols-1 md:grid-cols-4 lg:grid-cols-12 with gap-6.",
+    "glassmorphism": "Apple variant: backdrop-blur-xl bg-[#120D1A]/60 border border-white/10 shadow-2xl. Used for sticky nav, modals, and premium cards."
+  },
+  "motion_and_interactions": {
+    "scroll": "MANDATORY: Use Lenis for momentum-based smooth scrolling.",
+    "hero_carousel": "Framer Motion 'AnimatePresence' for vertically sliding text strings in the hero.",
+    "timeline": "Staggered GSAP/Framer Motion reveal. A vertical line that 'draws' itself as the user scrolls, lighting up nodes when they enter the viewport.",
+    "hover_effects": "Cards lift (-translate-y-1) with an expanded shadow and subtle border color shift. Buttons feature a magnetic or scale effect.",
+    "parallax": "Subtle parallax on abstract background blobs to create depth."
+  },
+  "sections_breakdown": {
+    "nav": "Sticky glassmorphism header. Logo left, links center, 'Resume' CTA right.",
+    "hero": "Mission-first layout. Left: Large H1, dynamic text carousel ('Data Analysis', 'AI', 'Technology for Social Good'). Button: 'Explore My Journey ↓'. Right: Confident portrait within a custom geometric frame (e.g., squircle) with a subtle glowing border.",
+    "vision": "Emotional center. Large expressive typography. Focus on human-centric technology. Abstract coral/plum gradient floating in the background.",
+    "journey": "Interactive timeline. Left border or center line. Alternating staggered items. Dark mode specific styling with glowing dots on active states.",
+    "skills": "Bento Grid cards. NO progress bars. Grouped by 'Programming', 'Data', 'Soft Skills'. Use Phosphor/Lucide icons. Hover reveals subtle accent gradients.",
+    "projects": "Premium large cards. Image on top with max overlay bg-black/30. Content below in dark glass card. Includes description, tech stack pills, GitHub, and Demo links.",
+    "achievements": "Minimalist stat cards with giant numbers in Outfit font.",
+    "certificates": "Masonry/Grid layout. Filter pills at the top (Programming, Data Analytics, Leadership). Clicking a certificate opens a Shadcn Dialog (modal preview).",
+    "contact": "Large, bold section. Email, LinkedIn, GitHub links. Resume download button. Footer quote: 'Technology becomes meaningful when it improves human lives.' typed out elegantly."
+  },
+  "component_strategy": {
+    "structure": "Raw HTML/Tailwind for expansive, creative layouts (Hero, Vision).",
+    "interactive": "Shadcn UI (Dialog, Tabs, Cards) customized heavily to match the dark luxury aesthetic.",
+    "icons": "lucide-react or @phosphor-icons/react."
+  },
+  "accessibility_and_testing": {
+    "testing_attributes": "MANDATORY: Add 'data-testid' to all interactive elements (buttons, links, filters, form inputs). e.g., data-testid='explore-journey-btn', data-testid='cert-filter-programming'.",
+    "contrast": "Ensure text over gradients meets APCA standards. Use text-shadow over images if contrast is compromised."
+  },
+  "media_urls": {
+    "hero_portrait": [
+      {
+        "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxjb25maWRlbnQlMjB3b21hbiUyMHRlY2glMjBwb3J0cmFpdCUyMGRhcmt8ZW58MHx8fHwxNzgyMzYxODI2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Confident woman portrait in dark aesthetic, ideal for the Hero section photo frame."
+      }
+    ],
+    "abstract_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGNvcmFsJTIwZ29sZCUyMGRhcmslMjBncmFkaWVudHxlbnwwfHx8fDE3ODIzNjE4MjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract dark purple to coral gradient. Use as a low-opacity background layer behind Vision or Contact sections."
+      }
+    ],
+    "project_thumbnails": [
+      {
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkYXNoYm9hcmQlMjBhbmFseXRpY3MlMjBjb2RlfGVufDB8fHx8MTc4MjM2MTgyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Data analytics dashboard screen. Ideal for data/analytics featured project."
+      },
+      {
+        "url": "https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract data visualization graph. Ideal for an AI/Research project."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBkYXNoYm9hcmQlMjBhbmFseXRpY3MlMjBjb2RlfGVufDB8fHx8MTc4MjM2MTgyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Code and laptop visual. Ideal for a software engineering project."
+      }
+    ],
+    "certificate_placeholders": [
+      {
+        "url": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBkYXNoYm9hcmQlMjBhbmFseXRpY3MlMjBjb2RlfGVufDB8fHx8MTc4MjM2MTgyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Placeholder image for certificates gallery if actual certificate images are not provided."
+      }
+    ]
+  }
+}
