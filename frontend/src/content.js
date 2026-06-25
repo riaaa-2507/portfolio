@@ -13,10 +13,9 @@ export const SITE = {
   github: "https://github.com/riaaa-2507",
   linkedin: "https://www.linkedin.com/in/riya-s-751998330",
   resumeUrl: "/resume-placeholder.pdf",
-  // To use your real photo: upload it to /app/frontend/public/profile.jpg and change this to "/profile.jpg",
-  // or paste a direct image URL (Google Photos share links don't work as <img src>).
-  heroPhoto:
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
+  // Local profile & campus images (auto-rotated to correct orientation, served from /public)
+  heroPhoto: "/profile.jpg",
+  campusPhoto: "/campus.jpg",
   carousel: [
     "Data Analysis",
     "Artificial Intelligence",

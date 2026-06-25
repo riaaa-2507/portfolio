@@ -131,10 +131,10 @@ export default function Hero() {
             <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden border border-white shadow-[0_20px_60px_-20px_rgba(247,108,94,0.35)] bg-white">
               <img
                 src={SITE.heroPhoto}
-                alt="[Profile portrait placeholder]"
+                alt="Riya Singh — portrait"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
-                style={{ filter: "saturate(1.05) brightness(1.02)" }}
+                style={{ filter: "saturate(1.05) brightness(1.02)", objectPosition: "center center" }}
                 data-testid="hero-photo"
               />
               {/* Floating chip */}
