@@ -7,6 +7,7 @@ import {
   Users,
   HeartHandshake,
   Sprout,
+  Star,
 } from "lucide-react";
 import { COMMUNITY } from "@/content";
 
@@ -23,75 +24,109 @@ export default function Community() {
       <div className="blob w-[420px] h-[420px] bg-[#FFD6A5]/40 bottom-10 -right-20" />
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left: copy + CTA */}
-          <div className="lg:col-span-7">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-12 md:mb-16"
+        >
+          <div className="section-label mb-4">06 — In Community</div>
+          <h2 className="font-display font-black tracking-tighter leading-[0.95] text-[#1F1B16] text-5xl md:text-6xl">
+            Leadership &{" "}
+            <span className="font-serif-italic font-normal text-gradient-warm">
+              Community Involvement
+            </span>
+          </h2>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
+          {/* Left: role + description + initiative */}
+          <div className="lg:col-span-7 space-y-7">
+            {/* Role badge */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6 }}
-              className="section-label mb-4"
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="glass rounded-2xl p-5 flex items-start gap-4"
+              data-testid="community-role"
             >
-              06 — In Community
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#FF8E72] via-[#F76C5E] to-[#E8A53A] flex items-center justify-center shadow-md flex-shrink-0">
+                <Star size={20} className="text-white" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-[10px] uppercase tracking-[0.22em] text-[#E8A53A] font-semibold mb-1">
+                  Position of Responsibility
+                </div>
+                <div className="font-display font-bold text-lg md:text-xl text-[#1F1B16] leading-snug">
+                  {COMMUNITY.role}
+                </div>
+                <div className="text-sm text-[#5C5247] mt-0.5 leading-relaxed font-light">
+                  {COMMUNITY.roleOrg}
+                </div>
+                <div className="text-[11px] uppercase tracking-[0.18em] text-[#8A8276] font-semibold mt-2">
+                  {COMMUNITY.rolePeriod}
+                </div>
+              </div>
             </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7 }}
-              className="font-display font-black tracking-tighter leading-[0.95] text-[#1F1B16] text-5xl md:text-6xl"
-            >
-              Community{" "}
-              <span className="font-serif-italic font-normal text-gradient-warm">
-                Engagement
-              </span>
-            </motion.h2>
-
+            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-7 text-base md:text-lg text-[#5C5247] font-light leading-relaxed max-w-2xl"
+              className="text-base md:text-lg text-[#5C5247] font-light leading-relaxed"
             >
               {COMMUNITY.description}
             </motion.p>
 
+            {/* Initiative */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="glass rounded-2xl p-5 md:p-6"
+              data-testid="community-initiative"
             >
-              {hasInstagram ? (
-                <a
-                  href={COMMUNITY.instagramUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="View the event post on Instagram — opens in a new tab"
-                  className="btn-primary"
-                  data-testid="community-event-link"
-                >
-                  <Instagram size={18} aria-hidden="true" />
-                  View Event Post
-                  <ExternalLink size={14} aria-hidden="true" />
-                </a>
-              ) : (
-                <span
-                  className="btn-ghost cursor-default opacity-80"
-                  data-testid="community-event-link-pending"
-                  aria-label="Event post link coming soon"
-                >
-                  <Instagram size={16} aria-hidden="true" />
-                  Event post · link coming soon
-                </span>
-              )}
-              <span className="text-xs text-[#8A8276] tracking-[0.18em] uppercase font-semibold">
-                {COMMUNITY.contextTag}
-              </span>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-[#8A8276] font-semibold mb-2">
+                Initiative
+              </div>
+              <div className="font-display font-semibold text-[#1F1B16] text-base md:text-lg leading-snug">
+                {COMMUNITY.initiativeTitle}
+              </div>
+              <p className="text-sm text-[#5C5247] mt-2 leading-relaxed font-light">
+                {COMMUNITY.initiativeBody}
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                {hasInstagram ? (
+                  <a
+                    href={COMMUNITY.instagramUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="View the event post on Instagram — opens in a new tab"
+                    className="btn-primary !py-2.5 !px-5 text-sm"
+                    data-testid="community-event-link"
+                  >
+                    <Instagram size={16} aria-hidden="true" />
+                    View Event Post
+                    <ExternalLink size={12} aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span
+                    className="btn-ghost cursor-default opacity-80 !py-2.5 !px-5 text-sm"
+                    data-testid="community-event-link-pending"
+                    aria-label="Event post link coming soon"
+                  >
+                    <Instagram size={14} aria-hidden="true" />
+                    Event post · link coming soon
+                  </span>
+                )}
+              </div>
             </motion.div>
           </div>
 
@@ -104,7 +139,7 @@ export default function Community() {
             className="lg:col-span-5"
             aria-hidden="true"
           >
-            <div className="relative glass rounded-3xl p-8 md:p-10 overflow-hidden">
+            <div className="relative glass rounded-3xl p-8 md:p-10 overflow-hidden h-full">
               <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-gradient-to-br from-[#FFD6A5]/60 to-[#F6C6EA]/50 blur-2xl" />
               <div className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full bg-gradient-to-br from-[#CDEAC0]/60 to-[#BFE0F2]/40 blur-2xl" />
 

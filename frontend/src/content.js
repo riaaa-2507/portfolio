@@ -156,12 +156,16 @@ export const CERTIFICATES = [];
 
 export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leadership", "Other Learning"];
 
-// Community / Social Impact section — WDC pad drive
+// Community / Leadership section — WDC role + pad drive
 export const COMMUNITY = {
+  role: "Operational Secretary",
+  roleOrg: "Women's Development Cell · Motilal Nehru College, University of Delhi",
+  rolePeriod: "2025 — Present",
   description:
-    "Participated in a menstrual hygiene awareness and sanitary pad distribution initiative organized through the Women's Development Cell (WDC). The experience involved community outreach, teamwork, and promoting awareness about women's health and dignity, reinforcing the importance of social responsibility alongside academic and technical growth.",
-  // Replace with the official Instagram post URL when available
+    "Serving as the Operational Secretary of the Women's Development Cell (WDC) at Motilal Nehru College has given me opportunities to coordinate activities, contribute to community initiatives, and work collaboratively on events focused on awareness, inclusion, and social impact.",
+  initiativeTitle: "Menstrual Hygiene Awareness & Pad Distribution Drive",
+  initiativeBody:
+    "Participated in a menstrual hygiene awareness and sanitary pad distribution initiative organized through the WDC — community outreach, teamwork, and promoting awareness about women's health and dignity.",
   instagramUrl: "https://www.instagram.com/p/DUkw0lcEhCQ/?igsh=YWRrdG1qbnJpajJ5",
-  // Short context tag shown next to the CTA
   contextTag: "Women's Development Cell · Motilal Nehru College",
 };
