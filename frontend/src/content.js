@@ -106,7 +106,7 @@ export const PROJECTS = [
     blurb:
       "A research project for the Women's Development Cell exploring the intersection of caste and gender in India through structured investigation and reporting.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+      "double discrimination.png",
     tech: ["Research Methods", "Data Collection", "Documentation", "Web Research"],
     github: "https://docs.google.com/document/d/1qyaJp4glcojpsU6luxRaT2e45yDPO7y2YKEtcstlwxA/edit?usp=sharing",
     demo: "https://www.instagram.com/p/DVWOVlOAIs7/?igsh=MWNwYnM0YzVzc29sag==",
