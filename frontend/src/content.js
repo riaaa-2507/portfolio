@@ -82,9 +82,9 @@ export const JOURNEY = [
 ];
 
 export const SKILLS = {
-  Programming: ["Python", "C++", "Java", "JavaScript"],
+  Programming: ["Python", "C++", "Java(learning)", "JavaScript(learning)"],
   Data: ["Data Analysis", "Visualization", "Statistics", "SQL"],
-  Technology: ["Artificial Intelligence", "Machine Learning", "Web Development", "Git & GitHub"],
+  Technology: ["Web Development(learning)", "Git & GitHub(learning)", "AI & ML(exploring)"],
   "Soft Skills": ["Communication", "Curiosity", "Leadership", "Problem Solving", "Adaptability"],
 };
 
@@ -96,7 +96,7 @@ export const PROJECTS = [
     image:
       "webproject.png",
     tech: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-    github: "https://github.com/riaaa-2507/portfolio",
+    github: "https://github.com/riaaa-2507/webportfolio",
     demo: "#",
     learnings:
       "Learning web development by building a real product from scratch — understanding every design and technical decision.",
