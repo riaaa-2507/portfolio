@@ -1,5 +1,5 @@
 {
-  "summary": "Frontend-only testing of static personal website SPA. All 20+ requested functionalities verified successfully on https://impact-canvas-1.preview.emergentagent.com. Hero, Vision (4 pillars), Journey (7 items), Skills (4 categories), Projects (3 cards), Achievements (6 stats), Certificates (filters + modal), Connect, footer quote, mobile menu, scroll anchors, and resume PDF links all functional. No console/page errors detected.",
+  "summary": "Frontend-only testing of static personal website SPA. All 20+ requested functionalities verified successfully on https://portfolio-redesign-66.preview.emergentagent.com. Hero, Vision (4 pillars), Journey (7 items), Skills (4 categories), Projects (3 cards), Achievements (6 stats), Certificates (filters + modal), Connect, footer quote, mobile menu, scroll anchors, and resume PDF links all functional. No console/page errors detected.",
   "backend_issues": {
     "critical": [],
     "minor": []
