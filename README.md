@@ -21,5 +21,5 @@ Deployed on Netlify. Hosted on GitHub.
 - GitHub (version control)
 
 ## 🚀 What's Next
-Will be rebuilding with proper frontend skills as I learn more.
+Will be rebuilding with proper frontend skills as I learn more. Many more projects coming as soon as i complete them!
 
