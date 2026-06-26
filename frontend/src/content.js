@@ -156,6 +156,125 @@ export const CERTIFICATES = [];
 
 export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leadership", "Other Learning"];
 
+// College Memories & Experiences — year-by-year timeline
+// All captions, dates, and image URLs are PLACEHOLDERS — easily editable here.
+// Replace `src` values with your real photographs as you go.
+// Categories used: "Academics" | "Women Development Cell" | "Projects" | "Workshops" | "College Festivals" | "Leadership" | "Volunteering"
+export const MEMORY_CATEGORIES = [
+  "All",
+  "Academics",
+  "Women Development Cell",
+  "Projects",
+  "Workshops",
+  "College Festivals",
+  "Leadership",
+  "Volunteering",
+];
+
+export const COLLEGE_MEMORIES = [
+  {
+    label: "First Year",
+    period: "2025 — 2026",
+    status: "current",
+    note: "The first chapter — discovering, learning, and building roots.",
+    photos: [
+      {
+        src: "https://images.pexels.com/photos/7972324/pexels-photo-7972324.jpeg",
+        caption: "Morning at the college campus",
+        date: "Aug 2025",
+        category: "Academics",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1494809610410-160faaed4de0",
+        caption: "Long study hours in the library",
+        date: "Sep 2025",
+        category: "Academics",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1545886082-e66c6b9e011a",
+        caption: "Hands-on workshop on programming basics",
+        date: "Oct 2025",
+        category: "Workshops",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1549057446-9f5c6ac91a04",
+        caption: "WDC meeting — planning awareness initiatives",
+        date: "Oct 2025",
+        category: "Women Development Cell",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1607748862156-7c548e7e98f4",
+        caption: "Menstrual hygiene awareness drive",
+        date: "Nov 2025",
+        category: "Volunteering",
+      },
+      {
+        src: "https://images.pexels.com/photos/1181260/pexels-photo-1181260.jpeg",
+        caption: "First coding collaboration with classmates",
+        date: "Nov 2025",
+        category: "Projects",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb",
+        caption: "College cultural festival — colors and music",
+        date: "Dec 2025",
+        category: "College Festivals",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1731160807880-daf859b64420",
+        caption: "First glimpse of a hackathon atmosphere",
+        date: "Feb 2026",
+        category: "Workshops",
+      },
+      {
+        src: "https://images.pexels.com/photos/6549588/pexels-photo-6549588.jpeg",
+        caption: "Deep work — building my portfolio",
+        date: "Mar 2026",
+        category: "Projects",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1563461660947-507ef49e9c47",
+        caption: "Late-night build sessions with friends",
+        date: "Apr 2026",
+        category: "Projects",
+      },
+      {
+        src: "https://images.pexels.com/photos/31039051/pexels-photo-31039051.jpeg",
+        caption: "Quiet corners of the campus",
+        date: "May 2026",
+        category: "Academics",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1623461487986-9400110de28e",
+        caption: "Closing the first year — gratitude and growth",
+        date: "Jun 2026",
+        category: "Leadership",
+      },
+    ],
+  },
+  {
+    label: "Second Year",
+    period: "2026 — 2027",
+    status: "future",
+    note: "The story is still being written.",
+    photos: [],
+  },
+  {
+    label: "Third Year",
+    period: "2027 — 2028",
+    status: "future",
+    note: "The story is still being written.",
+    photos: [],
+  },
+  {
+    label: "Fourth Year",
+    period: "2028 — 2029",
+    status: "future",
+    note: "The story is still being written.",
+    photos: [],
+  },
+];
+
 // Community / Leadership section — WDC role + pad drive
 export const COMMUNITY = {
   role: "Operational Secretary",
