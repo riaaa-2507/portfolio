@@ -4,7 +4,6 @@ import Nav from "@/sections/Nav";
 import Hero from "@/sections/Hero";
 import Vision from "@/sections/Vision";
 import Journey from "@/sections/Journey";
-import CollegeMemories from "@/sections/CollegeMemories";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Achievements from "@/sections/Achievements";
@@ -20,7 +19,6 @@ function Home() {
       <Hero />
       <Vision />
       <Journey />
-      <CollegeMemories />
       <Skills />
       <Projects />
       <Achievements />

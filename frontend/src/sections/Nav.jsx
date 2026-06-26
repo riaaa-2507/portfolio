@@ -7,7 +7,6 @@ import ResumePreview from "@/components/ResumePreview";
 const links = [
   { label: "Vision", href: "#vision" },
   { label: "Journey", href: "#journey" },
-  { label: "Memories", href: "#memories" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Community", href: "#community" },
