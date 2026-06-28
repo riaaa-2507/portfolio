@@ -165,7 +165,7 @@ export const CERT_CATEGORIES = ["All", "Programming", "Data Analytics", "Leaders
 export const COMMUNITY = {
   role: "Operational Secretary",
   roleOrg: "Women's Development Cell · Motilal Nehru College, University of Delhi",
-  rolePeriod: "2025 — Present",
+  rolePeriod: "2026 — Present",
   description:
     "Serving as the Operational Secretary of the Women's Development Cell (WDC) at Motilal Nehru College has given me opportunities to coordinate activities, contribute to community initiatives, and work collaboratively on events focused on awareness, inclusion, and social impact.",
   initiativeTitle: "Menstrual Hygiene Awareness & Pad Distribution Drive",
