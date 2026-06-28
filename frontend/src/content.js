@@ -46,8 +46,13 @@ export const VISION = {
 export const JOURNEY = [
   {
     year: "2023",
-    title: "Completed Senior Secondary Education",
+    title: "Completed Secondary Education 10th grade",
     body: "Strengthened my interest in mathematics, science, and technology — the early sparks that pointed me toward computing.",
+  },
+   {
+    year: "2025",
+    title: "Completed senior Secondary Education 12th grade",
+    body: "Deepened my understanding of mathematics, physics, chemistry, and computer science, developed a strong passion for problem-solving and the field of computer science .",
   },
   {
     year: "2025",
